@@ -1,0 +1,15 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+    UPDATE PLAYERS VIEW
+{% endblock title %}
+
+{% block content %}
+    <form action="" method="post" class="form" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-outline-primary form-control">Update</button>
+        <br>
+        <a href="{% url 'core:update_players' %}" class="btn btn-outline-warning form-control">Cancel</a>
+    </form>
+{% endblock content %}
